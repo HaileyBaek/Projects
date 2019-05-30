@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+
+	int n, number;
+
+	string stars;
+
+	string center;
+
+	cout << "Enter a positive integer n: ";
+	cin >> n;
+
+	number = n;
+
+	while (n > 0) {
+		stars = string((2 * n - 1), '*');
+		center = string((number - n), ' ');
+		cout << center << stars << center << endl;
+		n--;
+	}
+
+	while (n < number) {
+		stars = string((2 * n + 1), '*');
+		center = string((number - n) - 1, ' ');
+		cout << center << stars << center << endl;
+		n++;
+	}
+
+	return 0;
+}
